@@ -87,15 +87,15 @@ class TaxRequest extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($externalCompanyId) && strlen($externalCompanyId) > 100) || (is_array($externalCompanyId) && count($externalCompanyId) > 100)) {
-            throw new \InvalidArgumentException(sprintf('externalCompanyId: Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($externalCompanyId) ? strlen($externalCompanyId) : count($externalCompanyId)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($externalCompanyId) ? strlen($externalCompanyId) : count($externalCompanyId)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($externalCompanyId) && strlen($externalCompanyId) < 1) || (is_array($externalCompanyId) && count($externalCompanyId) < 1)) {
-            throw new \InvalidArgumentException('externalCompanyId: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($externalCompanyId) && !is_string($externalCompanyId)) {
-            throw new \InvalidArgumentException(sprintf('externalCompanyId: Invalid value, please provide a string, "%s" given', gettype($externalCompanyId)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($externalCompanyId)), __LINE__);
         }
         $this->ExternalCompanyId = $externalCompanyId;
         return $this;

@@ -271,15 +271,15 @@ class Attributes extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($currencyCode) && strlen($currencyCode) > 3) || (is_array($currencyCode) && count($currencyCode) > 3)) {
-            throw new \InvalidArgumentException(sprintf('currencyCode: Invalid length, please provide an array with 3 element(s) or a scalar of 3 character(s) at most, "%d" length given', is_scalar($currencyCode) ? strlen($currencyCode) : count($currencyCode)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 3 element(s) or a scalar of 3 character(s) at most, "%d" length given', is_scalar($currencyCode) ? strlen($currencyCode) : count($currencyCode)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($currencyCode) && strlen($currencyCode) < 1) || (is_array($currencyCode) && count($currencyCode) < 1)) {
-            throw new \InvalidArgumentException('currencyCode: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($currencyCode) && !is_string($currencyCode)) {
-            throw new \InvalidArgumentException(sprintf('currencyCode: Invalid value, please provide a string, "%s" given', gettype($currencyCode)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($currencyCode)), __LINE__);
         }
         $this->CurrencyCode = $currencyCode;
         return $this;
@@ -301,15 +301,15 @@ class Attributes extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($documentType) && strlen($documentType) > 50) || (is_array($documentType) && count($documentType) > 50)) {
-            throw new \InvalidArgumentException(sprintf('documentType: Invalid length, please provide an array with 50 element(s) or a scalar of 50 character(s) at most, "%d" length given', is_scalar($documentType) ? strlen($documentType) : count($documentType)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 50 element(s) or a scalar of 50 character(s) at most, "%d" length given', is_scalar($documentType) ? strlen($documentType) : count($documentType)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($documentType) && strlen($documentType) < 1) || (is_array($documentType) && count($documentType) < 1)) {
-            throw new \InvalidArgumentException('documentType: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($documentType) && !is_string($documentType)) {
-            throw new \InvalidArgumentException(sprintf('documentType: Invalid value, please provide a string, "%s" given', gettype($documentType)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($documentType)), __LINE__);
         }
         $this->DocumentType = $documentType;
         return $this;
@@ -448,15 +448,15 @@ class Attributes extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($productCode) && strlen($productCode) > 4) || (is_array($productCode) && count($productCode) > 4)) {
-            throw new \InvalidArgumentException(sprintf('productCode: Invalid length, please provide an array with 4 element(s) or a scalar of 4 character(s) at most, "%d" length given', is_scalar($productCode) ? strlen($productCode) : count($productCode)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 4 element(s) or a scalar of 4 character(s) at most, "%d" length given', is_scalar($productCode) ? strlen($productCode) : count($productCode)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($productCode) && strlen($productCode) < 1) || (is_array($productCode) && count($productCode) < 1)) {
-            throw new \InvalidArgumentException('productCode: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($productCode) && !is_string($productCode)) {
-            throw new \InvalidArgumentException(sprintf('productCode: Invalid value, please provide a string, "%s" given', gettype($productCode)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($productCode)), __LINE__);
         }
         $this->ProductCode = $productCode;
         return $this;

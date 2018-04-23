@@ -104,15 +104,15 @@ class Document extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($documentNumber) && strlen($documentNumber) > 200) || (is_array($documentNumber) && count($documentNumber) > 200)) {
-            throw new \InvalidArgumentException(sprintf('Document Number Invalid length, please provide an array with 200 element(s) or a scalar of 200 character(s) at most, "%d" length given', is_scalar($documentNumber) ? strlen($documentNumber) : count($documentNumber)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 200 element(s) or a scalar of 200 character(s) at most, "%d" length given', is_scalar($documentNumber) ? strlen($documentNumber) : count($documentNumber)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($documentNumber) && strlen($documentNumber) < 1) || (is_array($documentNumber) && count($documentNumber) < 1)) {
-            throw new \InvalidArgumentException('Document Number Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($documentNumber) && !is_string($documentNumber)) {
-            throw new \InvalidArgumentException(sprintf('Document Number Invalid value, please provide a string, "%s" given', gettype($documentNumber)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($documentNumber)), __LINE__);
         }
         $this->DocumentNumber = $documentNumber;
         return $this;

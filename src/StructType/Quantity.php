@@ -76,15 +76,15 @@ class Quantity extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($uOM) && strlen($uOM) > 25) || (is_array($uOM) && count($uOM) > 25)) {
-            throw new \InvalidArgumentException(sprintf('uOM: Invalid length, please provide an array with 25 element(s) or a scalar of 25 character(s) at most, "%d" length given', is_scalar($uOM) ? strlen($uOM) : count($uOM)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 25 element(s) or a scalar of 25 character(s) at most, "%d" length given', is_scalar($uOM) ? strlen($uOM) : count($uOM)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($uOM) && strlen($uOM) < 1) || (is_array($uOM) && count($uOM) < 1)) {
-            throw new \InvalidArgumentException('uOM: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($uOM) && !is_string($uOM)) {
-            throw new \InvalidArgumentException(sprintf('uOM: Invalid value, please provide a string, "%s" given', gettype($uOM)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($uOM)), __LINE__);
         }
         $this->UOM = $uOM;
         return $this;

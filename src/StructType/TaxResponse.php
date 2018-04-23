@@ -79,15 +79,15 @@ class TaxResponse extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($hostRequestId) && strlen($hostRequestId) > 100) || (is_array($hostRequestId) && count($hostRequestId) > 100)) {
-            throw new \InvalidArgumentException(sprintf('HostRequestID: Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($hostRequestId) ? strlen($hostRequestId) : count($hostRequestId)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($hostRequestId) ? strlen($hostRequestId) : count($hostRequestId)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($hostRequestId) && strlen($hostRequestId) < 1) || (is_array($hostRequestId) && count($hostRequestId) < 1)) {
-            throw new \InvalidArgumentException('HostRequestID: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($hostRequestId) && !is_string($hostRequestId)) {
-            throw new \InvalidArgumentException(sprintf('HostRequestID: Invalid value, please provide a string, "%s" given', gettype($hostRequestId)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($hostRequestId)), __LINE__);
         }
         $this->HostRequestId = $hostRequestId;
         return $this;
@@ -109,15 +109,15 @@ class TaxResponse extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($hostRequestLoggingId) && strlen($hostRequestLoggingId) > 100) || (is_array($hostRequestLoggingId) && count($hostRequestLoggingId) > 100)) {
-            throw new \InvalidArgumentException(sprintf('HostRequestLoggingId: Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($hostRequestLoggingId) ? strlen($hostRequestLoggingId) : count($hostRequestLoggingId)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($hostRequestLoggingId) ? strlen($hostRequestLoggingId) : count($hostRequestLoggingId)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($hostRequestLoggingId) && strlen($hostRequestLoggingId) < 1) || (is_array($hostRequestLoggingId) && count($hostRequestLoggingId) < 1)) {
-            throw new \InvalidArgumentException('HostRequestLoggingId: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($hostRequestLoggingId) && !is_string($hostRequestLoggingId)) {
-            throw new \InvalidArgumentException(sprintf('HostRequestLoggingId: Invalid value, please provide a string, "%s" given', gettype($hostRequestLoggingId)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($hostRequestLoggingId)), __LINE__);
         }
         $this->HostRequestLoggingId = $hostRequestLoggingId;
         return $this;

@@ -106,15 +106,15 @@ class ReferenceDocument extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($originalDocumentId) && strlen($originalDocumentId) > 100) || (is_array($originalDocumentId) && count($originalDocumentId) > 100)) {
-            throw new \InvalidArgumentException(sprintf('originalDocumentId: Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($originalDocumentId) ? strlen($originalDocumentId) : count($originalDocumentId)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($originalDocumentId) ? strlen($originalDocumentId) : count($originalDocumentId)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($originalDocumentId) && strlen($originalDocumentId) < 1) || (is_array($originalDocumentId) && count($originalDocumentId) < 1)) {
-            throw new \InvalidArgumentException('originalDocumentId: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($originalDocumentId) && !is_string($originalDocumentId)) {
-            throw new \InvalidArgumentException(sprintf('originalDocumentId: Invalid value, please provide a string, "%s" given', gettype($originalDocumentId)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($originalDocumentId)), __LINE__);
         }
         $this->OriginalDocumentId = $originalDocumentId;
         return $this;
@@ -136,15 +136,15 @@ class ReferenceDocument extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($originalDocumentItem) && strlen($originalDocumentItem) > 100) || (is_array($originalDocumentItem) && count($originalDocumentItem) > 100)) {
-            throw new \InvalidArgumentException(sprintf('originalDocumentItem: Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($originalDocumentItem) ? strlen($originalDocumentItem) : count($originalDocumentItem)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 100 element(s) or a scalar of 100 character(s) at most, "%d" length given', is_scalar($originalDocumentItem) ? strlen($originalDocumentItem) : count($originalDocumentItem)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($originalDocumentItem) && strlen($originalDocumentItem) < 1) || (is_array($originalDocumentItem) && count($originalDocumentItem) < 1)) {
-            throw new \InvalidArgumentException('originalDocumentItem: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($originalDocumentItem) && !is_string($originalDocumentItem)) {
-            throw new \InvalidArgumentException(sprintf('originalDocumentItem: Invalid value, please provide a string, "%s" given', gettype($originalDocumentItem)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($originalDocumentItem)), __LINE__);
         }
         $this->OriginalDocumentItem = $originalDocumentItem;
         return $this;
@@ -166,15 +166,15 @@ class ReferenceDocument extends AbstractStructBase
     {
         // validation for constraint: maxLength
         if ((is_scalar($originalDocumentType) && strlen($originalDocumentType) > 50) || (is_array($originalDocumentType) && count($originalDocumentType) > 50)) {
-            throw new \InvalidArgumentException(sprintf('originalDocumentType: Invalid length, please provide an array with 50 element(s) or a scalar of 50 character(s) at most, "%d" length given', is_scalar($originalDocumentType) ? strlen($originalDocumentType) : count($originalDocumentType)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid length, please provide an array with 50 element(s) or a scalar of 50 character(s) at most, "%d" length given', is_scalar($originalDocumentType) ? strlen($originalDocumentType) : count($originalDocumentType)), __LINE__);
         }
         // validation for constraint: minLength
         if ((is_scalar($originalDocumentType) && strlen($originalDocumentType) < 1) || (is_array($originalDocumentType) && count($originalDocumentType) < 1)) {
-            throw new \InvalidArgumentException('originalDocumentType: Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
+            throw new \InvalidArgumentException('Invalid length, please provide an array with 1 element(s) or a scalar of 1 character(s) at least', __LINE__);
         }
         // validation for constraint: string
         if (!is_null($originalDocumentType) && !is_string($originalDocumentType)) {
-            throw new \InvalidArgumentException(sprintf('originalDocumentType: Invalid value, please provide a string, "%s" given', gettype($originalDocumentType)), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($originalDocumentType)), __LINE__);
         }
         $this->OriginalDocumentType = $originalDocumentType;
         return $this;
