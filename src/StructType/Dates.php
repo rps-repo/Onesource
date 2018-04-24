@@ -7,6 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for Dates StructType
  * @subpackage Structs
+ * @author WsdlToPhp <contact@wsdltophp.com>
  */
 class Dates extends AbstractStructBase
 {

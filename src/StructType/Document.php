@@ -7,6 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for Document StructType
  * @subpackage Structs
+ * @author WsdlToPhp <contact@wsdltophp.com>
  */
 class Document extends AbstractStructBase
 {

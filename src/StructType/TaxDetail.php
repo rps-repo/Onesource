@@ -7,6 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for TaxDetail StructType
  * @subpackage Structs
+ * @author WsdlToPhp <contact@wsdltophp.com>
  */
 class TaxDetail extends AbstractStructBase
 {

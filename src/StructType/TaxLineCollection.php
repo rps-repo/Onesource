@@ -7,6 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for TaxLineCollection StructType
  * @subpackage Structs
+ * @author WsdlToPhp <contact@wsdltophp.com>
  */
 class TaxLineCollection extends AbstractStructBase
 {

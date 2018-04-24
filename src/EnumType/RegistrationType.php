@@ -5,6 +5,7 @@ namespace Onesource\EnumType;
 /**
  * This class stands for RegistrationType EnumType
  * @subpackage Enumerations
+ * @author WsdlToPhp <contact@wsdltophp.com>
  */
 class RegistrationType
 {

@@ -9,6 +9,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
  * Meta informations extracted from the WSDL
  * - documentation: This type reflects the status of a tax calculation request. It is attached to the response at the document and request levels.
  * @subpackage Structs
+ * @author WsdlToPhp <contact@wsdltophp.com>
  */
 class Status extends AbstractStructBase
 {

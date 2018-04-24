@@ -5,6 +5,7 @@ namespace Onesource\EnumType;
 /**
  * This class stands for AccrualMethod EnumType
  * @subpackage Enumerations
+ * @author WsdlToPhp <contact@wsdltophp.com>
  */
 class AccrualMethod
 {

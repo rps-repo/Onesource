@@ -2,20 +2,21 @@
 
 namespace Onesource\ServiceType;
 
-use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
+use \SoapClient\SoapClientBase;
 
 /**
  * This class stands for Get ServiceType
  * @subpackage Services
+ * @author WsdlToPhp <contact@wsdltophp.com>
  */
-class Get extends AbstractSoapClientBase
+class Get extends SoapClientBase
 {
     /**
      * Method to call the operation originally named GetTax
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
+     * @uses SoapClientBase::getSoapClient()
+     * @uses SoapClientBase::setResult()
+     * @uses SoapClientBase::getResult()
+     * @uses SoapClientBase::saveLastError()
      * @param \Onesource\StructType\TaxRequest $parameters
      * @return \Onesource\StructType\TaxResponse|bool
      */
@@ -31,7 +32,7 @@ class Get extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @see AbstractSoapClientBase::getResult()
+     * @see SoapClientBase::getResult()
      * @return \Onesource\StructType\TaxResponse
      */
     public function getResult()
