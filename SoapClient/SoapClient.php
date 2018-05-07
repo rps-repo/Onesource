@@ -12,6 +12,7 @@ class SoapClient extends \SoapClient
      * @var string
      */
     protected $lastModifiedRequest;
+
     /**
      * @param string $request
      * @param string $location
@@ -23,8 +24,10 @@ class SoapClient extends \SoapClient
     public function __doRequest($request, $location, $action, $version, $one_way = 0)
     {
         $this->removeEmptyTags($request);
+        $this->replaceTag();
         return parent::__doRequest($this->__getLastRequest(), $location, $action, $version, $one_way);
     }
+
     /**
      * Returns last request
      * @see SoapClient::__getLastRequest()
@@ -34,6 +37,7 @@ class SoapClient extends \SoapClient
     {
         return $this->lastModifiedRequest;
     }
+
     /**
      * Sets last request values
      * @param string $_lastRequest
@@ -43,6 +47,18 @@ class SoapClient extends \SoapClient
     {
         return ($this->lastModifiedRequest = $lastRequest);
     }
+
+    /**
+     * add namespace to TaxRequest tag
+     * @return string
+     */
+    private function replaceTag()
+    {
+        $xml = $this->__getLastRequest();
+        $xml = str_replace('<ns1:TaxRequest>', '<ns1:TaxRequest xmlns="http://www.sabrix.com/services/taxservice/2009-12-20/">', $xml);
+        return $this->__setLastRequest($xml);
+    }
+
     /**
      * Removes empty tags from XML
      * @param string $xml
@@ -51,17 +67,21 @@ class SoapClient extends \SoapClient
      */
     private function removeEmptyTags($xml, $exceptTags = array())
     {
-        if (!empty($xml)) {
+        if (!empty($xml))
+        {
             $dom = new \DOMDocument('1.0', 'UTF-8');
-            $dom->formatOutput = true;
-            if ($dom->loadXML($xml) && $dom->hasChildNodes()) {
+            $dom->formatOutput = TRUE;
+            if ($dom->loadXML($xml) && $dom->hasChildNodes())
+            {
                 $mainNode = $dom->childNodes->item(0);
                 self::removeEmptyTagsFromDomNode($mainNode, $exceptTags);
                 $xml = $dom->saveXML($mainNode);
             }
         }
+
         return $this->__setLastRequest($xml);
     }
+
     /**
      * Removes empty tags from \DOMNode
      * @uses RemoveEmptyRequestTags::removeEmptyTagsFromDomNode()
@@ -70,11 +90,15 @@ class SoapClient extends \SoapClient
      */
     private static function removeEmptyTagsFromDomNode(\DOMNode &$domNode, $exceptTags = array())
     {
-        if ($domNode->hasChildNodes()) {
-            foreach ($domNode->childNodes as $childNode) {
+        if ($domNode->hasChildNodes())
+        {
+            foreach ($domNode->childNodes as $childNode)
+            {
                 self::removeEmptyTagsFromDomNode($childNode, $exceptTags);
             }
-        } elseif (trim($domNode->nodeValue) === '' && !in_array($domNode->nodeName, $exceptTags) && $domNode->attributes->length === 0) {
+        }
+        elseif (trim($domNode->nodeValue) === '' && !in_array($domNode->nodeName, $exceptTags) && $domNode->attributes->length === 0)
+        {
             /**
              * As the parent might not have returned an empty value as it contained this child
              * we go process back the parent to be sure that he validated as not empty
@@ -84,4 +108,5 @@ class SoapClient extends \SoapClient
             self::removeEmptyTagsFromDomNode($parentNode, $exceptTags);
         }
     }
+
 }
